@@ -13,8 +13,6 @@ public class App
     {
         List<Person> roster = Arrays.asList(new Person(), new Person(), new Person());
         Person[] rosterAsArray = roster.toArray(new Person[roster.size()]);
-        Arrays.sort(rosterAsArray, (Person a, Person b) -> {
-            return a.getBirthday().compareTo(b.getBirthday());
-        });
+        Arrays.sort(rosterAsArray, Person::compareByAge);
     }
 }
