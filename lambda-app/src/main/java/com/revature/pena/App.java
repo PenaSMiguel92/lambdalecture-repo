@@ -21,5 +21,11 @@ public class App
 
         bicycleList.stream().sorted(bikeFrameSizeComparator::compare);
         System.out.println(bicycleList);
+
+        List<String> bikeBrands = Arrays.asList("Giant", "Scott", "Trek", "GT");
+        Bicycle[] bikes = bikeBrands.stream().map(Bicycle::new).toArray(Bicycle[]::new);
+        for (Bicycle bike : bikes) {
+            System.out.println(bike);
+        }
     }
 }

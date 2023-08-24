@@ -27,4 +27,9 @@ public class Bicycle {
         this.frameSize = frameSize;
     }
 
+    @Override
+    public String toString() {
+        return "\nBicycle: " + "\nBrand: " + this.brand + "\nFrameSize: " + this.frameSize;
+    }
+
 }
