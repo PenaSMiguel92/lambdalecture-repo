@@ -1,17 +1,18 @@
-// import java.util.ArrayList;
+
+import java.util.*;
 
 class Test {
-    interface FuncInter1 {
-        int operation(int a, int b);
-    }
+    // interface FuncInter1 {
+    //     int operation(int a, int b);
+    // }
 
-    interface FuncInter2 {
-        void sayMessage(String message);
-    }
+    // interface FuncInter2 {
+    //     void sayMessage(String message);
+    // }
 
-    private int operate(int a, int b, FuncInter1 fobj) {
-        return fobj.operation(a, b);
-    }
+    // private int operate(int a, int b, FuncInter1 fobj) {
+    //     return fobj.operation(a, b);
+    // }
     public static void main(String[] args) {
         // ArrayList<Integer> arrL = new ArrayList<>();
         // arrL.add(1);
@@ -23,17 +24,20 @@ class Test {
 
         // arrL.forEach(n -> {if (n % 2 == 0) System.out.println(n); });
 
-        FuncInter1 add = (int x, int y) -> x + y;
-        FuncInter1 multiply = (int x, int y) -> x * y;
+        // FuncInter1 add = (int x, int y) -> x + y;
+        // FuncInter1 multiply = (int x, int y) -> x * y;
 
-        Test tobj = new Test();
+        // Test tobj = new Test();
 
-        System.out.println("Addition is " + tobj.operate(6, 3, add));
-        System.out.println("Multiplication is " + tobj.operate(6, 3, multiply));
+        // System.out.println("Addition is " + tobj.operate(6, 3, add));
+        // System.out.println("Multiplication is " + tobj.operate(6, 3, multiply));
 
-        FuncInter2 fobj = message -> System.out.println("Hello " + message);
+        // FuncInter2 fobj = message -> System.out.println("Hello " + message);
 
-        fobj.sayMessage("Revature");
+        // fobj.sayMessage("Revature");
+
+        List<String> messages = Arrays.asList("hello", "revature", "associates!");
+        messages.forEach(word -> StringUtils.capitalize(word));
 
     }
 } 
